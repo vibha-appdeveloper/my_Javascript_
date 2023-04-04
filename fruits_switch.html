@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fruitsswitch
+    </title>
+</head>
+<body>
+    <div id = "output"></div>
+
+    <script>
+          let option = prompt("Which fruit you like to purchase");
+          let price = 0;
+          let fruit = "Apple";
+       
+          switch (option)
+             {case "1" :
+                price = 0.99;
+                fruit = "Apple";
+                console.log("Apple",.99);
+                break;
+             case "2" :
+                price = 0.79;
+                fruit = "Pear";
+                console.log("Pear",.79);
+                 break;
+             case "3" : 
+                price = 1.19;
+                fruit = "Orange";
+                console.log("Orange",1.19);
+                break;
+             case "4" :
+                price = 1.49;
+                fruit = " Grapes";
+                console.log("Grapes",1.49);
+                break;
+             case "5" :
+               price = 1.79;
+               fruit = " Grapefruit"
+                console.log("Grapefruit",1.79);
+                break;
+             case "6" :
+               price = .79;
+               fruit = "Kiwi";
+                console.log("Kiwi",.79);
+                break;
+             case "7" :
+                 price = 1.29;
+                 fruit = "Apricot";
+                console.log("Apricot",1.29);
+            }              
+
+                let option_2 = prompt("How many you want to purchase"); 
+                
+                document.getElementById("output").innerHTML = option_2 + " "+  fruit + " " + Number(option_2) * price; 
+    </script>
+</body>
+</html>

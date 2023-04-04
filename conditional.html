@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditinals</title>
+</head>
+
+<body>
+    <div id = "output"></div>
+
+    <script>
+            
+       let Additinal_charges = prompt("How much did the member spend this month in additional charges?");
+       let Membership_Fee = 500;
+       let Subtotal = (Membership_Fee + Number(Additinal_charges));
+       let discount = 0;
+
+       if(Additinal_charges >= 250  && Additinal_charges <= 500){ discount = 0.1; } 
+       else if(Additinal_charges >= 501 && Additinal_charges <= 1000) { discount = 0.125;}
+       else if(Additinal_charges >= 1001 && Additinal_charges <= 2000) { discount = 0.15;}
+       else if(Additinal_charges >= 2001 && Additinal_charges <=2001) { discount = 0.2;} 
+        
+       let Final_Fee_Bill = (Subtotal - (Subtotal * discount));
+       let tax = (Membership_Fee + Number(Additinal_charges)) * 0.0625;
+       let Grand_total = Final_Fee_Bill - tax; 
+       
+       
+      
+        //Additional_Fee = Additinal_charges * discount;
+        //Subtotal = Basic_Membership + Additional_Fee;
+        //finalfee = Subtotal - (Subtotal * discount);
+        //Grand_total = finalfee - tax;
+
+        document.getElementById("output").innerHTML = ("Membership Fee = " + Number(Membership_Fee) +
+                                                       "<br>Additinal charges = " + Number(Additinal_charges)+ 
+                                                       "<br>Subtotal =" + Subtotal +
+                                                       "<br>discount =" + discount +
+                                                       "<br>Final Fee Bill =" + Final_Fee_Bill +
+                                                       "<br>tax =" + tax +
+                                                       "<br>Grand total =" + Grand_total);
+     console.log(Membership_Fee, Number(Additinal_charges), Subtotal,discount, Final_Fee_Bill,tax, Grand_total);
+     //500 '820' 1320 0.125 1320 82.5 1237.5
+
+
+       //document.getElementById("output").innerHTML = Membership_Fees + Additinal_Fee + Subtotal + Discount + 
+
+    </script>
+</body>
+</html>

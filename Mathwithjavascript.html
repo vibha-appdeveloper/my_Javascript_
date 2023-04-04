@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathsjavascript</title>
+</head>
+<body>
+    <div>first div</div>
+    <div id = "input">Second div with id</div>
+    <div name = "input">Third div with name attribute</div>
+    <div id = "output_1"></div>
+    <div id = "output_2"></div>
+    <div id = "output_3"></div> 
+    <script>
+        let atBats = 300;
+        let hits = 65;
+        let singles = 50;
+        let doubles = 5;
+        let triples = 3;
+        let homeruns = 7;
+        let walks = 22;
+
+        let BattingAverage = Math.round(hits / 
+        (atBats - walks));
+
+        document.getElementById("output_1").innerHTML = "Batting Average = " + BattingAverage;  
+
+         let OnBasePercentage = Math.round(hits + walks) / atBats;
+
+        document.getElementById("output_2").innerHTML = "On Base Percentage = " + OnBasePercentage;
+        
+         let TotalBases = singles + (doubles * 2)+ (triples * 3) + (homeruns * 4);
+
+         document.getElementById("output_3").innerHTML = "Total Bases = " + TotalBases;
+
+         console.log(OnBasePercentage , BattingAverage ,  TotalBases);
+    </script>
+
+</body>
+</html>
